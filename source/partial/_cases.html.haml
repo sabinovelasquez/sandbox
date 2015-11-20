@@ -123,10 +123,37 @@
 		.case.col-sm-4
 			.hover.text-center
 				.inner
-					%h3 Nombre del Caso
-					%p
-						Descripción.
-			%img.img-responsive( src = "img/cases/enjoy-slotmachine.png" )
+					%h3 
+						Bugbuster
+					%small Lab
+					%hr
+					= precede '<strong>Desafío:</strong>' do
+						%p
+							Juego Retro con look & feel noventero.
+							
+					= precede '<strong>Respuesta:</strong>' do
+						%p
+							Utilizando la paleta de colores de Nintendo y sus respectivas limitaciones técnicas, recreamos un entorno para un juego tipo "space shooter".
+						%p
+							Con diseño y creación de personajes originales.
+					.footer
+						.col-xs-4
+							.icon.text-center
+								%i.fa.fa-mobile
+							%small
+								Compatible con mobile
+						.col-xs-4
+							.icon.text-center
+								%i.fa.fa-rocket
+							%small
+								Juego original
+						.col-xs-4
+							.icon.text-center
+								%i.fa.fa-share-alt
+							%small
+								Online rank
+								
+			%img.img-responsive( src = "img/cases/sabino-bugbuster.png" )
 		.case.col-sm-4
 			.hover.text-center
 				.inner
