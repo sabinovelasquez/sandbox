@@ -11,7 +11,7 @@
 /build
 
 # hide server info
-.config.rb
+config.rb
 
 # Ignore cache
 /.sass-cache
