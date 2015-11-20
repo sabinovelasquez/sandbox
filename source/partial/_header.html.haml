@@ -1,12 +1,11 @@
-%header
+%header{ :'ng-controller' => 'headerCtrl' }
 	.container
 		.row
-			%h1.logo.text-hide
+			%h1.logo.text-hide{ :'data-ng-init' => 'init()', :'ng-class' => '{initial : initial}' }
 				sandbox
-			%h2.text-center
+			%h2.text-center{ :'ng-class' => '{initial : initial}' }
 				sandbox
-			%h4.text-center
+			%h4.text-center{ :'ng-class' => '{initial : initial}' }
 				Juegos y aplicaciones digitales con propósito.
-			.down
+			.down{ :'ng-class' => '{initial : initial}' }
 				%i.fa.fa-angle-double-down
-	.bg
