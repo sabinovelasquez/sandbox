@@ -25,6 +25,7 @@ case ENV['TARGET'].to_s.downcase
   when 'production'
     activate :deploy do |deploy|
     deploy.method = :rsync
+    deploy.user = 'sabino'
     deploy.build_before = true
     deploy.host = '45.55.240.255'
     deploy.path = '/var/www/sandbox.cl/public_html/'  
