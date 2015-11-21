@@ -1,0 +1,42 @@
+%section#contact{ :'ng-controller' => 'contactCtrl' }
+	.container
+		.row.text-center
+			%h2
+				Contacto
+			%hr
+			%p
+				Contáctanos.
+
+		.row
+			.sent{ :'ng-class' => '{ "hidden" : !sended }' }
+				%h2.text-center 
+					Mensaje enviado :D 
+					%small Pronto nos contactaremos contigo
+			.sent{ :'ng-class' => '{ "hidden" : !sended_err }' }
+				%h2.text-center 
+					Ha ocurrido un error :(
+					%small Pronto nos contactaremos contigo.
+
+			%form{ :'name' => 'contacto', :'ng-class' => '{ "hidden" : sended }', :'ng-submit' => 'submitContacto()' }
+				%fieldset
+					.col-sm-6
+					
+						%label{ :for => 'email', :'ng-class' => '{"required" : contacto.email.$error.required, "invalid" : contacto.email.$error.email, "ok" : contacto.email.$valid}' }
+							%span.no-placeholder
+								Email
+							%input#email{ :type => 'email', :name => 'email', :placeholder => 'Email', :required => true, :'ng-model' => 'email' }
+					.col-sm-6
+						%label{ :for => 'subject', :'ng-class' => '{"required" : contacto.subject.$error.required, "ok" : contacto.subject.$valid}' }
+							%span.no-placeholder
+								Asunto
+							%input#subject{ :type => 'text', :name => 'subject', :placeholder => 'Asunto', :required => true, :'ng-model' => 'subject' }
+					.col-sm-12
+						%label{ :for => 'message', :'ng-class' => '{"required" : contacto.message.$error.required, "ok" : contacto.message.$valid}' }
+							%span.no-placeholder
+								Mensaje
+							%textarea{ :placeholder => 'Mensaje', :name => 'message', :required => true, :'ng-model' => 'message' }
+
+					.col-sm-12
+						.form-controls
+							%button.btn.btn-send{ :type => 'submit', :'ng-disabled' => 'contacto.$invalid' }
+								Enviar
