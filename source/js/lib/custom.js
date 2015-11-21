@@ -27,11 +27,11 @@ var app = angular
 
 			var params = {
 				"message": {
-					"from_email":"no-reply@sandbox.cl",
+					"from_email":email,
 					"to":[
-						{"email": email }
+						{"email": "sabino@2brains.cl" }
 					],
-					"subject": subject,
+					"subject": subject+' -from sandbox.cl',
 					"text": message
 				}
 			};

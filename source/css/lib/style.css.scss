@@ -248,11 +248,11 @@ section, footer{
 	    		}
 	    	}
 	    	img{
-	    		filter: grayscale(0) blur(5px);
-				-webkit-filter: grayscale(0) blur(5px);
-				-moz-filter: grayscale(0) blur(5px);
-				-o-filter: grayscale(0) blur(5px);
-				-ms-filter: grayscale(0) blur(5px);
+	    		filter: grayscale(0);
+				-webkit-filter: grayscale(0);
+				-moz-filter: grayscale(0);
+				-o-filter: grayscale(0);
+				-ms-filter: grayscale(0);
 				-moz-transform: scale(1.08);
 				-ms-transform: scale(1.08);
 				-webkit-transform: scale(1.08);
