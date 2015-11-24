@@ -39,9 +39,11 @@ var app = angular
 			m.messages.send(params, function(res) {
 				$scope.$apply(function () {
 					$scope.sended = true;
+					ga('send', 'event', 'Email', 'Send', 'Success');
 				});
 			}, function(err) {
 				$scope.$apply(function () {
+					ga('send', 'event', 'Email', 'Send', 'Error');
 					$scope.sended_err = true;
 				});
 			});
