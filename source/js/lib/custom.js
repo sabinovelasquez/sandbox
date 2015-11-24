@@ -1,7 +1,7 @@
 'use strict';
 var app = angular
 
-	.module('app', ['ngAnimate','ui.bootstrap'])
+	.module('app', ['ngAnimate','ui.bootstrap', 'duScroll'])
 
 	.controller( 'headerCtrl', ['$scope', function($scope) {
 		
